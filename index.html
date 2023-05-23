@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +10,38 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
-  <div>
-    <div class="btn btn-primary w-[100px]">测试</div>
+<body class="bg-gray-100">
+  <div class="flex justify-center items-center h-screen">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h1 class="text-2xl font-bold mb-4">在线测试系统</h1>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <label for="subject" class="text-lg font-medium">选择题库</label>
+          <select name="subject" id="subject" class="border border-gray-300 rounded-lg p-2">
+            <option value="math">数学</option>
+            <option value="english">英语</option>
+            <option value="history">历史</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="knowledge" class="text-lg font-medium">选择知识点范围</label>
+          <select name="knowledge" id="knowledge" class="border border-gray-300 rounded-lg p-2">
+            <option value="algebra">代数</option>
+            <option value="geometry">几何</option>
+            <option value="trigonometry">三角函数</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="quantity" class="text-lg font-medium">选择题目数量</label>
+          <input type="number" name="quantity" id="quantity" class="border border-gray-300 rounded-lg p-2" min="1" max="50" value="10">
+        </div>
+        <div class="flex justify-center">
+          <a href="./test.html" class="btn btn-primary w-[100px]">开始测试</a>
+        </div>
+      </div>
+    </div>
   </div>
   
 </body>
 </html>
+
