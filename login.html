@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在线测试系统</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100">
+  <div class="flex justify-center items-center h-screen">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h1 class="text-2xl font-bold mb-4">在线测试系统</h1>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <label for="username" class="text-lg font-medium">用户名</label>
+          <input type="text" name="username" id="username" class="border border-gray-300 rounded-lg p-2">
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="password" class="text-lg font-medium">密码</label>
+          <input type="password" name="password" id="password" class="border border-gray-300 rounded-lg p-2">
+        </div>
+        <div class="flex justify-center">
+          <button class="btn btn-primary w-[100px]" onclick="login()">登录</button>
+          <button class="btn btn-primary w-[100px]" onclick="register()">注册</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function login() {
+      // 登录逻辑
+      window.location.href = "./home.html";
+    }
+
+    function register() {
+      // 注册逻辑
+      window.location.href = "./test.html";
+    }
+  </script>
+</body>
+</html>
+
+
