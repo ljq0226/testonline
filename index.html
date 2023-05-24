@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,40 +8,156 @@
   <title>在线测试系统</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
 
 </head>
-<body class="bg-gray-100">
-  <div class="flex justify-center items-center h-screen">
-    <div class="bg-white rounded-lg shadow-lg p-8">
-      <h1 class="text-2xl font-bold mb-4">在线测试系统</h1>
-      <div class="flex flex-col gap-4">
-        <div class="flex flex-col gap-2">
-          <label for="subject" class="text-lg font-medium">选择题库</label>
-          <select name="subject" id="subject" class="border border-gray-300 rounded-lg p-2">
-            <option value="math">数学</option>
-            <option value="english">英语</option>
-            <option value="history">历史</option>
+
+<body class="bg-gray-100 h-screen overflow-y-scroll text-black">
+  <div id="alert" class="fixed alert alert-success shadow-lg w-1/2 top-[8vh] left-[25%] hidden">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span>开始测试</span>
+    </div>
+  </div>
+  <header class="flex justify-between items-center py-4 px-8 bg-white shadow-lg">
+    <div class="text-3xl font-bold">在线测试</div>
+    <div class="flex flex-1 justify-center items-center">
+      <div class="mx-4 cursor-pointer">自测</div>
+      <div class="mx-4 cursor-pointer">我的课堂</div>
+    </div>
+    <div class="mx-4 cursor-pointer"><img src="https://via.placeholder.com/50" alt="个人中心"></div>
+  </header>
+
+
+  <div class="w-4/5 my-1 h-[85%] overflow-y-scroll scrollbar-none border mx-auto shadow-lg mt-[3vh] p-4 flex flex-col">
+    <div class="border-2 ">
+      <div class="flex space-x-2">
+        专业: 软件工程 <div class="ml-2"> <input type="radio" name="radio-1" class="radio  radio-success" checked /></div>
+        <div></div>
+        大数据 <div class="ml-2"> <input type="radio" name="radio-1" class="radio  radio-success" checked /></div>
+      </div>
+      <div class="flex space-x-2">
+        学科: 数据结构 <div class="ml-2"> <input type="radio" name="radio-2" class="radio  radio-success" checked /></div>
+        <div></div>
+        软件测试 <div class="ml-2"> <input type="radio" name="radio-2" class="radio  radio-success" checked /></div>
+      </div>
+    </div>
+
+
+    <div class="border-2 p-2">
+      <div class="relative">
+        <input type="text" class="input w-[50vw] pr-10  bg-gray-500 text-white" placeholder="搜索题库">
+        <button class="absolute top-0 right-0 rounded-l-none btn btn-primary">搜索</button>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col mt-8 border-2">
+      <div class="p-2 space-y-2">
+        <div class="flex">
+          <h1 class="text-xl">数据结构题库1</h1>
+          <div class="flex-1"></div>
+          <button class="btn btn-success" onclick="showAlert()">生成测试</button>
+        </div>
+        <div>
+          知识点范围:
+          <select class="select select-success w-[120px] bg-gray-500 text-white ">
+            <option disabled selected>开始范围</option>
+            <option>数组</option>
+            <option>链表</option>
+            <option>栈</option>
+            <option>队列</option>
+            <option>树</option>
+            <option>图</option>
+            <option>并查集</option>
+          </select>
+
+          <select class="select select-success w-[120px] bg-gray-500 text-white ">
+            <option disabled selected>结束范围</option>
+            <option>数组</option>
+            <option>链表</option>
+            <option>栈</option>
+            <option>队列</option>
+            <option>树</option>
+            <option>图</option>
+            <option>并查集</option>
           </select>
         </div>
-        <div class="flex flex-col gap-2">
-          <label for="knowledge" class="text-lg font-medium">选择知识点范围</label>
-          <select name="knowledge" id="knowledge" class="border border-gray-300 rounded-lg p-2">
-            <option value="algebra">代数</option>
-            <option value="geometry">几何</option>
-            <option value="trigonometry">三角函数</option>
+        <div>
+          测试时间: <input class="input w-[100px] bg-gray-500 text-white" type="text" value="" placeholder="90"> 分钟
+        </div>
+        <p>题库简介：该题库包含大部分数据结构相关的试题，题型丰富，包括选择题、判断题、简答题</p>
+        <div class="w-[30vw] h-[10vh] overflow-y-hidden">
+          <img height="140px" width="160px" class=""
+            src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col mt-8 border-2">
+      <div class="p-2 space-y-2">
+        <div class="flex">
+          <h1 class="text-xl">数据结构题库2</h1>
+          <div class="flex-1"></div>
+          <button class="btn btn-success" onclick="showAlert()">生成测试</button>
+        </div>
+        <div>
+          知识点范围:
+          <select class="select select-success w-[120px] bg-gray-500 text-white ">
+            <option disabled selected>开始范围</option>
+            <option>数组</option>
+            <option>链表</option>
+            <option>栈</option>
+            <option>队列</option>
+            <option>树</option>
+            <option>图</option>
+            <option>并查集</option>
+          </select>
+
+          <select class="select select-success w-[120px] bg-gray-500 text-white ">
+            <option disabled selected>结束范围</option>
+            <option>数组</option>
+            <option>链表</option>
+            <option>栈</option>
+            <option>队列</option>
+            <option>树</option>
+            <option>图</option>
+            <option>并查集</option>
           </select>
         </div>
-        <div class="flex flex-col gap-2">
-          <label for="quantity" class="text-lg font-medium">选择题目数量</label>
-          <input type="number" name="quantity" id="quantity" class="border border-gray-300 rounded-lg p-2" min="1" max="50" value="10">
+        <div>
+          测试时间: <input class="input w-[100px] bg-gray-500 text-white" type="text" value="" placeholder="90"> 分钟
         </div>
-        <div class="flex justify-center">
-          <a href="./test.html" class="btn btn-primary w-[100px]">开始测试</a>
+        <p>题库简介：该题库包含大部分数据结构相关的试题，题型丰富，包括选择题、判断题、简答题</p>
+        <div class="w-[30vw] h-[10vh] overflow-y-hidden">
+          <img height="140px" width="160px" class=""
+            src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="">
+
         </div>
       </div>
     </div>
   </div>
-  
-</body>
-</html>
+  <script>
+    function showAlert() {
+      document.getElementById("alert").classList.remove("hidden");
+      setTimeout(function () {
+        document.getElementById("alert").classList.add("hidden");
+        window.location.href = "./test.html";
+      }, 2000);
+    }
+  </script>
 
+</body>
+
+</html>
