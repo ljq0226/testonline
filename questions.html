@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刷题模式</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+  <div class="h-screen overflow-y-scroll px-[10%] py-[5%]">
+    <div class="border-2 shadow-lg p-3">
+      <h1 class="text-2xl font-bold mb-4 text-center">数据结构题库2</h1>
+      <p class="text-lg mb-4">当前题目：<span>1</span>/200</p>
+      <div class="question">
+        <p class="text-lg font-bold mb-2">在长度为 n 的顺序表中删除第 i个元素(1≤i≤n)时，元素移动的次数为( )。</p>
+        <div class="options space-y-2">
+          <div class="option flex items-center space-x-2">
+
+            <input type="radio" class="radio radio-success" id="option1" name="option" value="option1">
+            <label for="option1">A: <span> n-i+1</span> </label>
+          </div>
+          <div class="option flex items-center space-x-2">
+
+            <input type="radio" class="radio radio-success" id="option2" name="option" value="option2">
+            <label for="option2">B: <span>i</span> </label>
+          </div>
+          <div class="option flex items-center space-x-2">
+
+            <input type="radio" class="radio radio-success" id="option3" name="option" value="option3">
+            <label for="option3">C: <span>i+1</span> </label>
+          </div>
+          <div class="option flex items-center space-x-2">
+            <input type="radio" class="radio radio-success" id="option4" name="option" value="option4">
+            <label for="option4">D: <span>n-i</span> </label>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between mt-10 mb-2">
+        <button class="btn btn-primary w-32">上一题</button>
+        <button class="btn btn-secondary w-32">下一题</button>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    const questionList = [
+      {
+        question: '链表不具有的特点是（ ）',
+        options: ''
+
+      }
+    ]
+
+  </script>
+</body>
+
+</html>
