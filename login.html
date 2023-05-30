@@ -14,7 +14,8 @@
   <div class="flex justify-center items-center h-screen">
     <div class="bg-white rounded-lg shadow-lg p-8">
       <h1 class="text-2xl font-bold mb-4">在线测试系统</h1>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-6">
+      
         <div class="flex flex-col gap-2">
           <label for="username" class="text-lg font-medium">用户名</label>
           <input type="text" name="username" id="username" class="border border-gray-300 rounded-lg p-2">
@@ -23,20 +24,36 @@
           <label for="password" class="text-lg font-medium">密码</label>
           <input type="password" name="password" id="password" class="border border-gray-300 rounded-lg p-2">
         </div>
+        <div class="flex flex-col gap-2">
+          <label for="username" class="text-lg font-medium">身份</label>
+
+          <select class="select select-primary w-full max-w-xs">
+            <option disabled selected>选择角色</option>
+            <option>学生</option>
+            <option>教师</option>
+            <option>管理员</option>
+          </select>
+        </div>
         <div class="flex justify-center">
-          <button class="btn btn-primary w-[100px]" onclick="login()">登录</button>
-          <button class="btn btn-primary w-[100px]" onclick="register()">注册</button>
+          <button class="btn btn-primary w-[70px] mr-10" onclick="login()">登录</button>
+          <button class="btn btn-primary w-[70px]" onclick="register()">注册</button>
         </div>
       </div>
     </div>
   </div>
   
   <script>
-    function login() {
-      // 登录逻辑
-      window.location.href = "./home.html";
+   function login() {
+      var select = document.querySelector('.select-primary');
+      var role = select.options[select.selectedIndex].text;
+      if (role === '学生') {
+        window.location.href = "./index.html";
+      } else if (role === '教师') {
+        window.location.href = "./index_t.html";
+      } else if (role === '管理员') {
+        window.location.href = "./index_m.html";
+      }
     }
-
     function register() {
       // 注册逻辑
       window.location.href = "./test.html";
