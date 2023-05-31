@@ -10,7 +10,28 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg"></h3>
+    <textarea class="w-full h-32 py-4 border text-white border-gray-300 rounded-md p-2" placeholder="这道题我不太懂">
+      这道题我不太懂 
+    </textarea>
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn" onclick="showAlert()">发送反馈</label>
+    </div>
+  </div>
+</div>
+<div id="alert" class="fixed alert alert-info shadow-lg w-1/2 top-[8vh] left-[25%] hidden">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+      viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span id="alertspan">反馈提交成功</span>
+  </div>
+</div>
 <body class="bg-gray-100 h-screen overflow-y-scroll text-black"> 
    <header class="flex justify-between items-center py-4 px-8 bg-white shadow-lg">
     <a href="./index.html" class="text-3xl font-bold">在线测试</a>
@@ -49,26 +70,25 @@
   
   </header>
 
-  <div class=" px-[10%] py-[5%]">
+  <div class=" px-[10%] py-[5%] bg-gray-100">
     <div class="border-2 shadow-lg p-3">
-      
       <p class="text-lg mb-4">当前题目：<span>1</span>/200</p>
       <div class="question">
         <p class="text-lg font-bold mb-2">在长度为 n 的顺序表中删除第 i个元素(1≤i≤n)时，元素移动的次数为( )。</p>
         <div class="options space-y-2">
           <div class="option flex items-center space-x-2">
 
-            <input type="radio" class="radio radio-success" id="option1" name="option" value="option1">
-            <label for="option1">A: <span> n-i+1</span> </label>
+            <input disabled  type="radio" class="radio radio-success" id="option1" name="option" value="option1">
+            <label class="text-warning" for="option1">A: <span > n-i+1</span> </label>
           </div>
           <div class="option flex items-center space-x-2">
 
-            <input type="radio" class="radio radio-success" id="option2" name="option" value="option2">
+            <input disabled type="radio" class="radio radio-success" id="option2" name="option" value="option2">
             <label for="option2">B: <span>i</span> </label>
           </div>
           <div class="option flex items-center space-x-2">
 
-            <input type="radio" class="radio radio-success" id="option3" name="option" value="option3">
+            <input disabled  type="radio" class="radio radio-success" id="option3" name="option" value="option3">
             <label for="option3">C: <span>i+1</span> </label>
           </div>
           <div class="option flex items-center space-x-2 text-green-300">
@@ -82,25 +102,59 @@
               <h1>解析:</h1>
               在长度为n的顺序表中删除第i个元素时，需要将第i+1至第n个元素都向前移动一位，因此元素移动的次数为n-i。因此正确答案为D。
             </div>
+            <div class="flex w-full mt-4">
+              <div class="flex-1"></div>
+              <label for="my-modal-6" class="mr-4 btn btn-info">问题反馈</label>
+            </div>
           </div>
         </div>
       </div>
-      <div class="flex justify-between mt-10 mb-2">
-        <button class="btn btn-primary w-32">上一题</button>
-        <button class="btn btn-secondary w-32">下一题</button>
+    </div>
+    <div class="w-full bg-white shadow-md py-4 px-8 flex flex-col items-start mt-4">
+      <p class="text-lg mb-4">当前题目：<span>2</span>/200</p>
+      <div class="text-lg font-bold mb-4">单选题</div>
+      <h1 class="text-black text-lg my-2">1.在链表中，如何删除一个节点？ </h1>
+      <div class="w-full flex flex-col items-start">
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" disabled id="option1" name="question1" value="option1" class="radio radio-success">
+          <label for="option1" class="ml-2">A. 将该节点的前一个节点的next指针指向该节点的下一个节点</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option2" disabled name="question1" value="option2" class="radio radio-success">
+          <label for="option2" class="ml-2 text-warning"> B. 将该节点的下一个节点的next指针指向该节点的前一个节点 </label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" checked id="option3" name="question1" value="option3" class="radio radio-success">
+          <label for="option3" class="ml-2 text-success">C. 将该节点的前一个节点的prev指针指向该节点的下一个节点</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option4" disabled name="question1" value="option4" class="radio radio-success">
+          <label for="option4" class="ml-2"> D. 将该节点的下一个节点的prev指针指向该节点的前一个节点</label>
+        </div>
+        <div class="w-full bg-gray-200 h-[25vh] mt-10">
+          <h1>您的选择：B</h1>
+          <h1>参考答案： <span class="text-green-400 text-2xl bold-lg">C</span></h1>
+          <div class="mt-4">
+            <h1>解析:</h1>
+            A. 将该节点的前一个节点的next指针指向该节点的下一个节点是链表中删除一个节点的正确方法。
+            在链表中，每个节点都有一个指向下一个节点的指针。要删除某个节点时，需要将该节点的前一个节点的指针指向该节点的下一个节点，这样就可以将该节点从链表中删除了。
+            选项B、C和D所述的操作都不是链表中删除节点的正确方法。选项B描述的操作可能会破坏链表结构，而选项C和D所述的prev指针并不是链表节点通常具备的属性。
+          </div>
+        </div>
+        <div class="flex w-full mt-4">
+          <div class="flex-1"></div>
+          <label for="my-modal-6" class="btn mr-4 btn-info">问题反馈</label>
+        </div>
       </div>
     </div>
-
   </div>
   <script>
-    const questionList = [
-      {
-        question: '链表不具有的特点是（ ）',
-        options: ''
-
-      }
-    ]
-
+ function showAlert() {
+      document.getElementById("alert").classList.remove("hidden");
+      setTimeout(function () {
+        document.getElementById("alert").classList.add("hidden");
+      }, 1000);
+    }
   </script>
 </body>
 
