@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试 2</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 overflow-y-scroll " style="min-width: 400px;">
+  <div id="alert" class="fixed alert alert-success shadow-lg w-1/2 left-[25%] top-[8vh] hidden">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span>提交成功！</span>
+    </div>
+  </div>
+  <div class="flex flex-col items-center justify-center w-[80%] mx-auto ">
+    <div class="w-full h-full bg-white shadow-md py-4 px-8 flex justify-between items-center">
+      <a href="./index.html" class="btn btn-primary">返回</a>
+      <div class="text-lg font-bold flex-1 flex  justify-center">测试名称</div>
+      <button class="btn btn-primary" onclick="showAlert()">提交测试</button>
+    </div>
+    <div class="w-full bg-white shadow-md py-4 px-4 flex justify-between items-center mt-4">
+      <div class="text-sm">测试时间：2023-06-01 08:00~10:00</div>
+      <div class="text-sm">难度：中等</div>
+      <div class="text-sm">题目数量：20</div>
+    </div>
+    <div class="w-full bg-white shadow-md py-4 px-8 flex flex-col items-start mt-4">
+      <div class="text-lg font-bold mb-4">单选题</div>
+      <h1 class="text-black text-lg my-2">1.在链表中，如何删除一个节点？ </h1>
+      <div class="w-full flex flex-col items-start">
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option1" name="question1" value="option1" class="radio radio-success">
+          <label for="option1" class="ml-2">A. 将该节点的前一个节点的next指针指向该节点的下一个节点</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option2" name="question1" value="option2" class="radio radio-success">
+          <label for="option2" class="ml-2"> B. 将该节点的下一个节点的next指针指向该节点的前一个节点 </label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option3" name="question1" value="option3" class="radio radio-success">
+          <label for="option3" class="ml-2">C. 将该节点的前一个节点的prev指针指向该节点的下一个节点</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option4" name="question1" value="option4" class="radio radio-success">
+          <label for="option4" class="ml-2"> D. 将该节点的下一个节点的prev指针指向该节点的前一个节点</label>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-white shadow-md py-4 px-8 flex flex-col items-start mt-4">
+      <div class="text-lg font-bold mb-4">多选题</div>
+      <h1 class="text-black text-lg my-2">1. 关于栈的说法，下列哪些是正确的？</h1>
+      <div class="w-full flex flex-col items-start">
+        <div class="w-full flex items-center mb-2">
+          <input type="checkbox" id="option7" name="question2" value="option7" class="checkbox checkbox-success">
+          <label for="option7" class="ml-2">A. 栈是一种线性数据结构</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="checkbox" id="option8" name="question2" value="option8" class="checkbox checkbox-success">
+          <label for="option8" class="ml-2">B. 栈的插入和删除操作都在栈顶进行</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="checkbox" id="option9" name="question2" value="option9" class="checkbox checkbox-success">
+          <label for="option9" class="ml-2">C. 栈的插入操作叫做push，删除操作叫做pop</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="checkbox" id="option10" name="question2" value="option10" class="checkbox checkbox-success">
+          <label for="option10" class="ml-2">D. 栈的先进后出（LIFO）原则保证了数据的顺序性</label>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-white shadow-md py-4 px-8 flex flex-col items-start mt-4">
+      <div class="text-lg font-bold mb-4">判断题</div>
+      <h1 class="text-black text-lg my-2">1. 队列和栈都是一种线性数据结构?</h1>
+
+      <div class="w-full flex flex-col items-start">
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option11" name="question3" value="option11"  class="radio radio-success">
+          <label for="option11" class="ml-2">A. 正确</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <input type="radio" id="option12" name="question3" value="option12"  class="radio radio-success">
+          <label for="option12" class="ml-2">B. 错误</label>
+        </div>
+        <div class="w-full flex items-center mb-2">
+          <label for="option13" class="ml-2"></label>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-white shadow-md py-4 px-8 flex flex-col items-start mt-4">
+      <div class="text-lg font-bold mb-4">简答题</div>
+      <h1 class="text-black text-lg my-2">1. 请简要说明哈希表的工作原理，并举例说明其应用场景。</h1>
+      <div class="w-full flex flex-col items-start">
+        <textarea class="w-full h-32 border border-gray-300 rounded-md p-2" placeholder="请按要求回答问题"></textarea>
+      </div>
+    </div>
+
+    
+  </div>
+  <script>
+    function showAlert() {
+      document.getElementById("alert").classList.remove("hidden");
+      setTimeout(function() {
+        document.getElementById("alert").classList.add("hidden");
+        window.location.href = "./index.html";
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
+
+
