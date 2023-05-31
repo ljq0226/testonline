@@ -1,12 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>教师端</title>
+  <title>在线测试系统-教师端</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
 </head>
-<body>
-  教师端
+
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<label class="modal modal-bottom sm:modal-middle" for="my-modal-6">
+  <div class="modal-box bg-gray-300">
+    <h3 class="font-bold text-lg">刷题模式设置</h3>
+    <div class="flex space-x-2 my-4">
+      题型：单选题 <div class="ml-2">
+        <input type="radio" name="radio-11" class="radio radio-success" />
+      </div>
+      <div></div>
+      多选题 <div class="ml-2">
+        <input type="radio" name="radio-11" checked class="radio  radio-success" />
+      </div>
+      <div></div>
+      判断题 <div class="ml-2">
+        <input type="radio" name="radio-11" class="radio  radio-success" />
+      </div>
+      <div></div>
+      简答题 <div class="ml-2">
+        <input type="radio" name="radio-11" class="radio  radio-success" />
+      </div>
+    </div>
+    <div class="my-4">
+      知识点范围:
+      <select class="select select-success w-[120px] bg-gray-500 text-white ">
+        <option disabled selected>开始范围</option>
+        <option>数组</option>
+        <option>链表</option>
+        <option>栈</option>
+        <option>队列</option>
+        <option>树</option>
+        <option>图</option>
+        <option>并查集</option>
+      </select>
+
+      <select class="select select-success w-[120px] bg-gray-500 text-white ">
+        <option disabled selected>结束范围</option>
+        <option>数组</option>
+        <option>链表</option>
+        <option>栈</option>
+        <option>队列</option>
+        <option>树</option>
+        <option>图</option>
+        <option>并查集</option>
+      </select>
+    </div>
+    <label>
+      题目数量：
+      <input type="number" class="bg-gray-200 text-black" name="question-quantity" placeholder="20">
+    </label>
+    <div class="modal-action">
+      <a href="./questions.html" for="my-modal-6" class="btn btn-primary">开始刷题</a>
+    </div>
+  </div>
+</label>
+
+<input type="checkbox" id="my-modal-4" class="modal-toggle" />
+<label class="modal modal-bottom sm:modal-middle" for="my-modal-4">
+  <div class="modal-box bg-gray-300">
+    <h3 class="font-bold text-lg">生成测试设置</h3>
+    <div class="flex space-x-2 my-4">
+      题型：单选题 <div class="ml-2">
+        <input type="checkbox" name="checkbox-1" class="checkbox checkbox-success" />
+      </div>
+      <div></div>
+      多选题 <div class="ml-2">
+        <input type="checkbox" name="checkbox-1" class="checkbox checkbox-success" />
+      </div>
+      <div></div>
+      判断题 <div class="ml-2">
+        <input type="checkbox" name="checkbox-1" class="checkbox checkbox-success" />
+      </div>
+      <div></div>
+      简答题 <div class="ml-2">
+        <input type="checkbox" name="checkbox-1" class="checkbox checkbox-success" />
+      </div>
+    </div>
+    <div class="my-4">
+      知识点范围:
+      <select class="select select-success w-[120px] bg-gray-500 text-white ">
+        <option disabled selected>开始范围</option>
+        <option>数组</option>
+        <option>链表</option>
+        <option>栈</option>
+        <option>队列</option>
+        <option>树</option>
+        <option>图</option>
+        <option>并查集</option>
+      </select>
+
+      <select class="select select-success w-[120px] bg-gray-500 text-white ">
+        <option disabled selected>结束范围</option>
+        <option>数组</option>
+        <option>链表</option>
+        <option>栈</option>
+        <option>队列</option>
+        <option>树</option>
+        <option>图</option>
+        <option>并查集</option>
+      </select>
+    </div>
+    <div class="my-4">
+      试题难度:
+      <select class="select select-success w-[120px] bg-gray-500 text-white ">
+        <option disabled selected>选择难度</option>
+        <option>简单</option>
+        <option>中等</option>
+        <option>困难</option>
+      </select>
+    </div>
+    <label>
+      题目数量：
+      <input type="number" class="bg-gray-200 text-black" name="question-quantity" placeholder="20">
+    </label>
+    <div class="mt-4">
+      测试时间: <input class="input w-[100px] bg-gray-500 text-white" type="text" value="" placeholder="90"> 分钟
+    </div>
+    <div class="modal-action">
+      <a href="./test.html" for="my-modal-4" class="btn btn-primary">开始测试</a>
+    </div>
+  </div>
+</label>
+
+
+<body class="bg-gray-100 h-screen overflow-y-scroll text-black">
+  <div id="alert" class="fixed alert alert-success shadow-lg w-1/2 top-[8vh] left-[25%] hidden">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span id="alertspan">准备开始测试</span>
+    </div>
+  </div>
+
+
+  <header class="flex justify-between items-center py-4 px-8 bg-white shadow-lg">
+    <a href="./index_t.html" class="text-3xl font-bold">在线测试</a>
+    <div class="flex flex-1 justify-center items-center">
+      <a href="./index_t.html" class="mx-4 underline cursor-pointer">测试管理</a>
+      <a href="./class_t.html" class="mx-4 cursor-pointer">课堂管理</a>
+    </div>
+    <div class="dropdown dropdown-bottom">
+      <label tabindex="0" class="avatar cursor-pointer">
+        <div class="w-12 rounded-full">
+          <img src="/img/dsm.jpeg" />
+        </div>
+      </label>
+      <ul tabindex="0" class="dropdown-content -left-20  shadow  menu bg-gray-200 w-40 p-2 rounded-box">
+        <li class="hover:bg-gray-500 ">
+          <a href="./testrecord.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+          测试记录
+          </a>
+        </li>
+        <li class="hover:bg-gray-500 ">
+          <a href="./errorbook.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            错题本
+          </a>
+        </li>
+        <li class="hover:bg-gray-500 ">
+          <a href="/login.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            退出登录
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+  
+  </header>
+
+
+  <div class="w-4/5 my-1 h-[85%] overflow-y-scroll scrollbar-none border mx-auto shadow-lg mt-[3vh] p-4 flex flex-col">
+    <div class="border-2 ">
+    </div>
+
+
+    <script>
+      function showAlert() {
+        document.getElementById("alert").classList.remove("hidden");
+        setTimeout(function () {
+          document.getElementById("alert").classList.add("hidden");
+          window.location.href = "./test.html";
+        }, 1000);
+      }
+      function showAlert2() {
+        document.getElementById("alert").classList.remove("hidden");
+        document.getElementById("alertspan").innerHTML = '准备进入刷题模式'
+        setTimeout(function () {
+          document.getElementById("alert").classList.add("hidden");
+
+          window.location.href = "./questions.html";
+        }, 1000);
+      }
+    </script>
+
 </body>
+
 </html>
