@@ -76,42 +76,49 @@
     
   
   </header>
-  <div class="my-4 w-4/5 mx-auto">
-    <label for="my-modal-6" class="btn btn-accent">创建课堂</label>
+  <div class="flex flex-col border-2 rounded-xl w-4/5 h-4/5 mt-8 p-4 mx-auto ">
+    <h1 class="text-2xl bold w-full ">班级管理</h1>
+
+    <div class="overflow-x-auto w-full">
+      <table class="table w-full text-white">
+        <!-- head -->
+        <thead class="bg-gray-200">
+          <tr>
+            <th></th>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>测试平均成绩</th>
+          </tr>
+        </thead>
+        <tbody class="bg-gray-200">
+          <!-- row 1 -->
+          <tr class="hover">
+            <th>1</th>
+            <td>罗小黑</td>
+            <td>120230202</td>
+            <td>88.6</td>
+          </tr>
+          <!-- row 2 -->
+          <tr class="hover">
+            <th>2</th>
+            <td>王德发</td>
+            <td>120230202</td>
+            <td>89.2</td>
+          </tr>
+          <!-- row 3 -->
+          <tr class="hover">
+            <th>3</th>
+            <td>韩金轮</td>
+            <td>120230202</td>
+            <td>86.3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div class="flex border-2 rounded-xl w-4/5 h-4/5 mt-8 px-4 mx-auto ">
-    <div class="card m-4 w-96 h-72 bg-base-100 shadow-xl text-white">
-      <figure><img src="https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shoes" /></figure>
-      <div class="card-body">
-        <div class="card-title flex cursor-pointer">
-          <div onclick="classinfo() ">数据结构</div>
-          <div onclick="classinfo()" class="badge badge-success">张三</div>
-          <div onclick="classinfo()" class="badge badge-info">66</div>
-          <div class="flex-1"></div>
-          <label for="my-modal-5" class="btn btn-primary w-16 ">编辑</label>
-        </div>
-        <p>120230202、120230203</p>
-      </div>
-    </div>
-    <div class="card m-4 w-96 h-72 bg-base-100 shadow-xl text-white">
-      <figure><img src="https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shoes" /></figure>
-      <div class="card-body">
-        <div class="card-title flex cursor-pointer">
-          <div onclick="classinfo() ">软件测试</div>
-          <div onclick="classinfo()" class="badge badge-success">张三</div>
-          <div onclick="classinfo()" class="badge badge-info">66</div>
-          <div class="flex-1"></div>
-          <label for="my-modal-5" class="btn btn-primary w-16 ">编辑</label>
-        </div>
-        <p>120230202、120230203</p>
-      </div>
-    </div>
 
 
   <script>
-    function classinfo(){
-      window.location.href = './classinfo.html'
-    }
   </script>
   
 </body>
