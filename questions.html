@@ -40,25 +40,29 @@
             <input type="radio" class="radio radio-success" id="option4" name="option" value="option4">
             <label for="option4">D: <span>n-i</span> </label>
           </div>
+          <div class="w-full bg-gray-200 h-[20vh] mt-10" id="answer" style="display:none;">
+            <h1>参考答案：  <span class="text-green-400 text-2xl bold-lg">D</span></h1>
+            <div class="mt-4">
+              <h1>解析:</h1>
+              在长度为n的顺序表中删除第i个元素时，需要将第i+1至第n个元素都向前移动一位，因此元素移动的次数为n-i。因此正确答案为D。
+            </div>
+          </div>
         </div>
       </div>
       <div class="flex justify-between mt-10 mb-2">
         <button class="btn btn-primary w-32">上一题</button>
-        <button class="btn btn-secondary w-32">下一题</button>
+        <div>
+          <button class="btn btn-success w-32" onclick="document.getElementById('answer').style.display='block'">显示答案</button>
+
+          <button class="btn btn-secondary w-32">下一题</button>
+
+        </div>
       </div>
     </div>
 
   </div>
-  <script>
-    const questionList = [
-      {
-        question: '链表不具有的特点是（ ）',
-        options: ''
-
-      }
-    ]
-
-  </script>
 </body>
 
 </html>
+
+
