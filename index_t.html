@@ -8,6 +8,15 @@
   <title>在线测试系统-教师端</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+<style>
+  #editor—wrapper {
+    border: 1px solid #ccc;
+    z-index: 100; /* 按需定义 */
+  }
+  #toolbar-container { border-bottom: 1px solid #ccc; }
+  #editor-container { height: 500px; }
+</style>
   <style>
     ::-webkit-scrollbar {
       display: none;
@@ -16,14 +25,18 @@
 </head>
 
 <input type="checkbox" id="my-modal-1" class="modal-toggle" />
-<label for="my-modal-1" class="modal modal-bottom sm:modal-middle">
+<label  class="modal modal-bottom sm:modal-middle">
   <div class="modal-box bg-gray-300">
     <h3 class="font-bold text-lg">编辑单选</h3>
     <div class="my-4">
       试题题目:
+      <div id="editor—wrapper">
+        <div id="toolbar-container"><!-- 工具栏 --></div>
+        <div id="editor-container" class="h-[200px] overflow-y-scroll"><!-- 编辑器 --></div>
+    </div>
       <input type="text" placeholder="请编写题目" class="input text-white input-bordered w-full max-w-xs" />
     </div>
-    <div class="my-4 flex ">
+    <div class="my-4 flex">
       <div class="w-[65px]">
         试题选项:
       </div>
@@ -50,7 +63,7 @@
 </label>
 
 <input type="checkbox" id="my-modal-2" class="modal-toggle" />
-<label for="my-modal-2" class="modal modal-bottom sm:modal-middle">
+<label  class="modal modal-bottom sm:modal-middle">
   <div class="modal-box bg-gray-300">
     <h3 class="font-bold text-lg">编辑多选</h3>
     <div class="my-4">
@@ -84,7 +97,7 @@
 </label>
 
 <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-<label for="my-modal-3" class="modal modal-bottom sm:modal-middle">
+<label  class="modal modal-bottom sm:modal-middle">
   <div class="modal-box bg-gray-300">
     <h3 class="font-bold text-lg">编辑判断</h3>
     <div class="my-4">
@@ -116,7 +129,7 @@
 </label>
 
 <input type="checkbox" id="my-modal-4" class="modal-toggle" />
-<label for="my-modal-4" class="modal modal-bottom sm:modal-middle">
+<label  class="modal modal-bottom sm:modal-middle">
   <div class="modal-box bg-gray-300">
     <h3 class="font-bold text-lg">编辑简答</h3>
     <div class="my-4">
@@ -236,6 +249,35 @@
         }, 1000);
       }
     </script>
+<script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+<script>
+const { createEditor, createToolbar } = window.wangEditor
+
+const editorConfig = {
+    placeholder: 'Type here...',
+    onChange(editor) {
+      const html = editor.getHtml()
+      console.log('editor content', html)
+      // 也可以同步到 <textarea>
+    }
+}
+
+const editor = createEditor({
+    selector: '#editor-container',
+    html: '<p><br></p>',
+    config: editorConfig,
+    mode: 'default', // or 'simple'
+})
+
+const toolbarConfig = {}
+
+const toolbar = createToolbar({
+    editor,
+    selector: '#toolbar-container',
+    config: toolbarConfig,
+    mode: 'default', // or 'simple'
+})
+</script>
 
 </body>
 
