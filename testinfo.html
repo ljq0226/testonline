@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试成绩信息</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 h-screen overflow-y-scroll">
+
+  <header class="flex justify-between items-center py-4 px-8 bg-white shadow-lg">
+    <a href="./index_t.html" class="text-3xl font-bold">在线测试</a>
+    <div class="flex flex-1 justify-center items-center">
+      <a href="./index_t.html" class="mx-4 underline cursor-pointer">测试管理</a>
+      <a href="./class_t.html" class="mx-4 cursor-pointer">课堂管理</a>
+    </div>
+    <div class="dropdown dropdown-bottom">
+      <label tabindex="0" class="avatar cursor-pointer">
+        <div class="w-12 rounded-full">
+          <img src="/img/dsm.jpeg" />
+        </div>
+      </label>
+      <ul tabindex="0" class="dropdown-content -left-20  shadow  menu bg-gray-200 w-40 p-2 rounded-box">
+        <li class="hover:bg-gray-500 ">
+          <a href="./testrecord.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            发布记录
+          </a>
+        </li>
+        <li class="hover:bg-gray-500 ">
+          <a href="/login.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+            退出登录
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+  </header>
+
+
+
+  <div class="flex flex-col mt-8 border-2 shadow-lg mx-[10%] h-[70%] overflow-y-scroll">
+    <div class="flex justify-between">
+      <h1>测试名称:测试 2</h1>
+      <a href="./test_t.html" class="btn mr-4 mt-4  btn-primary">查看试卷</a>
+    </div>
+   
+    <div class="p-2 space-y-2 px-6 flex flex-col">
+
+ 
+      <table class="table-auto w-full">
+        <thead>
+          <tr>
+            <th class="px-4 py-2">
+            </th>
+            <th class="px-4 py-2">学号</th>
+            <th class="px-4 py-2">学生姓名</th>
+            <th class="px-4 py-2">参与时间(120min)</th>
+            <th class="px-4 py-2">成绩(100)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020201</td>
+            <td class="border px-4 py-2">张三</td>
+            <td class="border px-4 py-2">60</td>
+            <td class="border px-4 py-2">80</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020202</td>
+            <td class="border px-4 py-2">李四</td>
+            <td class="border px-4 py-2">80</td>
+            <td class="border px-4 py-2">90</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020203</td>
+            <td class="border px-4 py-2">王五</td>
+            <td class="border px-4 py-2">90</td>
+            <td class="border px-4 py-2">95</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020204</td>
+            <td class="border px-4 py-2">赵六</td>
+            <td class="border px-4 py-2">100</td>
+            <td class="border px-4 py-2">100</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020205</td>
+            <td class="border px-4 py-2">钱七</td>
+            <td class="border px-4 py-2">80</td>
+            <td class="border px-4 py-2">85</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020206</td>
+            <td class="border px-4 py-2">孙八</td>
+            <td class="border px-4 py-2">70</td>
+            <td class="border px-4 py-2">75</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020207</td>
+            <td class="border px-4 py-2">周九</td>
+            <td class="border px-4 py-2">60</td>
+            <td class="border px-4 py-2">70</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </td>
+            <td class="border px-4 py-2">12023020208</td>
+            <td class="border px-4 py-2">吴十</td>
+            <td class="border px-4 py-2">50</td>
+            <td class="border px-4 py-2">60</td>
+          </tr>
+        </tbody>
+        </table>
+        
+     
+      <div class="join py-4 self-center">
+        <button class="join-item btn">1</button>
+        <button class="join-item btn btn-active">2</button>
+        <button class="join-item btn">3</button>
+        <button class="join-item btn">4</button>
+      </div>
+    </div>
+  </div>
+<script>
+function test2(){
+  window.location.href = "./test2.html";
+}
+</script>
+
+</body>
+
+
+
+</html>
