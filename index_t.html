@@ -22,6 +22,96 @@
   </style>
 </head>
 
+<input type="checkbox" id="my-modal-8" class="modal-toggle" />
+<label for="my-modal-8" class="modal modal-bottom sm:modal-middle">
+<div class="modal-box bg-gray-300">
+  <div class="my-4">
+    测试名称:
+    <input type="text" placeholder="测试名称" class="input text-white input-bordered w-full max-w-xs" />
+
+  </div>
+  <div class="my-4">
+    开始时间:
+    <input type="date"  class="input text-white input-bordered  max-w-xs" />
+    <input type="time"  class="input text-white input-bordered  max-w-xs" />
+  </div>
+  <div class="my-4">
+    测试时长:
+    <input type="number" placeholder="120min" class="input text-white input-bordered w-1/3 max-w-xs" />
+  </div>
+  <div class="my-4">
+    参与班级:
+    <select class="select select-primary w-full max-w-xs bg-gray-200">
+      <option disabled selected>参与班级</option>
+      <option> 120230202</option>
+      <option>120230203</option>
+    </select>
+  </div>
+  <div class="my-4">
+    题库选择:
+    <select class="select select-primary w-full max-w-xs bg-gray-200">
+      <option disabled selected>题库</option>
+      <option> 数据结构 1</option>
+      <option>数据结构 2</option>
+    </select>
+  </div> 
+  <div class="my-4">
+    知识点范围:
+    <select class="select select-success w-[120px] bg-gray-500 text-white ">
+      <option disabled selected>开始范围</option>
+      <option>数组</option>
+      <option>链表</option>
+      <option>栈</option>
+      <option>队列</option>
+      <option>树</option>
+      <option>图</option>
+      <option>并查集</option>
+    </select>
+
+    <select class="select select-success w-[120px] bg-gray-500 text-white ">
+      <option disabled selected>结束范围</option>
+      <option>数组</option>
+      <option>链表</option>
+      <option>栈</option>
+      <option>队列</option>
+      <option>树</option>
+      <option>图</option>
+      <option>并查集</option>
+    </select>
+  </div>
+  <div class="my-4">
+    题型设置:
+    <div class="flex space-x-2">
+      题型: 单选 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2" class="checkbox  checkbox-success" checked /></div>
+      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+      <div></div>
+      多选 <div class="ml-2 flex items-center"> <input  type="checkbox" name="checkbox-2" class="checkbox  checkbox-success" /></div>
+      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+      <div></div>
+      判断 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2" class="checkbox  checkbox-success"  /></div>
+      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+      <div></div>
+      简答 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2" class="checkbox  checkbox-success"  /></div>
+      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+
+    </div> 
+  </div> 
+  <div class="my-4">
+    难易程度:
+    <select class="select select-primary w-full max-w-xs bg-gray-200">
+      <option disabled selected>选择难度</option>
+      <option >简单</option>
+      <option value="">中等</option>
+      <option value="">困难</option>
+    </select>
+  </div> 
+
+  <div class="modal-action">
+    <label for="my-modal-8" class="btn btn-primary">生成测试</label>
+  </div>
+</div>
+</label>
+
 <input type="checkbox" id="my-modal-7" class="modal-toggle" />
 <label for="my-modal-7" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box bg-gray-300">
@@ -355,7 +445,8 @@
       <label for="my-modal-5" class="btn btn-warning">富文本编辑</label> 
       <div class="flex-1"></div>
       <label for="my-modal-6" class="btn btn-success">发布测试</label> 
-      <a href="./testrecord_t.html" class="btn btn-error">测试记录</a>
+      <label for="my-modal-8" href="./testrecord_t.html" class="btn btn-error">生成测试</label>
+      <a href="./testrecord_t.html" class="btn ">测试记录</a>
 
     </div>
     <div class="border-2 flex flex-col">

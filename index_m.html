@@ -9,163 +9,39 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    .menu {
-      width: 20%;
-      height: 100vh;
-      background-color: #F3F4F6;
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .menu-item {
-      margin-top: 20px;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .menu-item:hover {
-      background-color: #E5E7EB;
-    }
-
-    .view {
-      width: 80%;
-      height: 100vh;
-      background-color: #FFFFFF;
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .table {
-      width: 80%;
-      height: 80%;
-      background-color: #FFFFFF;
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      overflow: auto;
-    }
-
-    .table td, .table th {
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #E5E7EB;
-    }
-
-    .table th {
-      background-color: #F3F4F6;
-      font-weight: bold;
-    }
-
-    .active {
-      background-color: #E5E7EB;
-    }
-  </style>
-
 </head>
-<body class="bg-gray-100">
-  <div class="menu">
-    <div class="menu-item active" data-menu="student">学生信息管理</div>
-    <div class="menu-item" data-menu="teacher">教师信息管理</div>
-    <div class="menu-item" data-menu="question">试题管理</div>
-    <div class="menu-item" data-menu="test">测试管理</div>
-    <div class="menu-item" data-menu="bank">题库管理</div>
+<body class="bg-gray-100 h-screen overflow-y-scroll">
+  <div class="h-[10%] bg-base-200 flex items-center border-b border-b-primary">
+    <h1 class="text-white text-2xl ml-4">在线测试系统</h1>
+    <div class="flex-1"></div>
+    <div class="dropdown dropdown-bottom">
+      <label tabindex="0" class="avatar cursor-pointer">
+        <div class="w-12 rounded-full">
+          <img src="/img/dsm.jpeg" />
+        </div>
+      </label>
+      <ul tabindex="0" class="dropdown-content -left-20  shadow  menu bg-gray-200 w-40 p-2 rounded-box">
+        <li class="hover:bg-gray-500 ">
+          <a href="/login.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            退出登录
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="flex-[0.02]"></div>
   </div>
-  <div class="view">
-    <div class="table" id="student">
-      <table>
-        <thead>
-          <tr>
-            <th>学号</th>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>年龄</th>
-            <th>操作</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>001</td>
-            <td>张三</td>
-            <td>男</td>
-            <td>20</td>
-            <td><button>编辑</button><button>删除</button></td>
-          </tr>
-          <tr>
-            <td>002</td>
-            <td>李四</td>
-            <td>女</td>
-            <td>21</td>
-            <td><button>编辑</button><button>删除</button></td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="flex h-[90%] ">
+    <div class="h-full bg-base-200">
+      <ul class="menu bg-base-200 w-56  rounded-box">
+        <li><a>题库管理</a></li>
+      </ul>
     </div>
-    <div class="table" id="teacher" style="display: none;">
-      <table>
-        <thead>
-          <tr>
-            <th>工号</th>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>年龄</th>
-            <th>操作</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>001</td>
-            <td>张三</td>
-            <td>男</td>
-            <td>30</td>
-            <td><button>编辑</button><button>删除</button></td>
-          </tr>
-          <tr>
-            <td>002</td>
-            <td>李四</td>
-            <td>女</td>
-            <td>31</td>
-            <td><button>编辑</button><button>删除</button></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="flex flex-col">
+123
     </div>
-    <div class="table" id="question" style="display: none;">
-      <table>
-        <thead>
-          <tr>
-            <th>试题编号</th>
-            <th>试题名称</th>
-            <th>试题类型</th>
-            <th>难度等级</th>
-            <th>操作</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>001</td>
-            <td>选择题1</td>
-            <td>选择题</td>
-            <td>简单</td>
-            <td><button>编辑</button><button>删除</button></td>
-          </tr>
-          <tr>
-            <td>002</td>
-            <td>选择题2</td>    
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  </div>
+
   </body>
   </html>
