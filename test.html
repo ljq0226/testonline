@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +14,15 @@
     }
   </style>
 </head>
+
 <body class="bg-gray-100 overflow-y-scroll " style="min-width: 400px;">
   <div id="alert" class="fixed alert alert-success shadow-lg w-1/2 left-[25%] top-[8vh] hidden">
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
       <span>提交成功！</span>
     </div>
   </div>
@@ -82,11 +87,11 @@
 
       <div class="w-full flex flex-col items-start">
         <div class="w-full flex items-center mb-2">
-          <input type="radio" id="option11" name="question3" value="option11"  class="radio radio-success">
+          <input type="radio" id="option11" name="question3" value="option11" class="radio radio-success">
           <label for="option11" class="ml-2">A. 正确</label>
         </div>
         <div class="w-full flex items-center mb-2">
-          <input type="radio" id="option12" name="question3" value="option12"  class="radio radio-success">
+          <input type="radio" id="option12" name="question3" value="option12" class="radio radio-success">
           <label for="option12" class="ml-2">B. 错误</label>
         </div>
         <div class="w-full flex items-center mb-2">
@@ -102,12 +107,12 @@
       </div>
     </div>
 
-    
+
   </div>
   <script>
     function showAlert() {
       document.getElementById("alert").classList.remove("hidden");
-      setTimeout(function() {
+      setTimeout(function () {
         document.getElementById("alert").classList.add("hidden");
         window.location.href = "./index.html";
       }, 1000);
@@ -115,6 +120,5 @@
   </script>
 
 </body>
+
 </html>
-
-

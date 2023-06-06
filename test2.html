@@ -46,6 +46,7 @@
     <span id="">已加入错题本</span>
   </div>
 </div>
+
 <body class="bg-gray-100 overflow-y-scroll " style="min-width: 400px;">
   <div id="alert" class="fixed alert alert-success shadow-lg w-1/2 left-[25%] top-[8vh] hidden">
     <div>
@@ -101,7 +102,7 @@
         <div class="flex w-full mt-4">
           <div class="flex-auto"></div>
           <label for="my-modal-6" class="btn btn-info">问题反馈</label>
-          <div class="btn ml-4 btn-success" onclick="showAlert2()" >加入错题本</div>
+          <div class="btn ml-4 btn-success" onclick="showAlert2()">加入错题本</div>
         </div>
       </div>
     </div>
@@ -110,19 +111,23 @@
       <h1 class="text-black text-lg my-2">1. 关于栈的说法，下列哪些是正确的？</h1>
       <div class="w-full flex flex-col items-start">
         <div class="w-full flex items-center mb-2">
-          <input checked type="checkbox" id="option7" name="question2" value="option7" class="checkbox checkbox-success">
+          <input checked type="checkbox" id="option7" name="question2" value="option7"
+            class="checkbox checkbox-success">
           <label for="option7" class="ml-2 text-success">A. 栈是一种线性数据结构</label>
         </div>
         <div class="w-full flex items-center mb-2">
-          <input checked type="checkbox" id="option8" name="question2" value="option8" class="checkbox checkbox-success">
+          <input checked type="checkbox" id="option8" name="question2" value="option8"
+            class="checkbox checkbox-success">
           <label for="option8" class="ml-2 text-success">B. 栈的插入和删除操作都在栈顶进行</label>
         </div>
         <div class="w-full flex items-center mb-2">
-          <input checked type="checkbox" id="option9" name="question2" value="option9" class="checkbox checkbox-success">
+          <input checked type="checkbox" id="option9" name="question2" value="option9"
+            class="checkbox checkbox-success">
           <label for="option9" class="ml-2 text-success">C. 栈的插入操作叫做push，删除操作叫做pop</label>
         </div>
         <div class="w-full flex items-center mb-2">
-          <input checked type="checkbox" id="option10" name="question2" value="option10" class="checkbox checkbox-success">
+          <input checked type="checkbox" id="option10" name="question2" value="option10"
+            class="checkbox checkbox-success">
           <label for="option10" class="ml-2 text-success">D. 栈的先进后出（LIFO）原则保证了数据的顺序性</label>
         </div>
 
@@ -141,7 +146,7 @@
         <div class="flex w-full mt-4">
           <div class="flex-auto"></div>
           <label for="my-modal-6" class="btn btn-info">问题反馈</label>
-          <div class="btn ml-4 btn-success" onclick="showAlert2()" >加入错题本</div>
+          <div class="btn ml-4 btn-success" onclick="showAlert2()">加入错题本</div>
         </div>
 
       </div>
@@ -175,7 +180,7 @@
         <div class="flex w-full mt-4">
           <div class="flex-auto"></div>
           <label for="my-modal-6" class="btn btn-info">问题反馈</label>
-          <div class="btn ml-4 btn-success" onclick="showAlert2()" >加入错题本</div>
+          <div class="btn ml-4 btn-success" onclick="showAlert2()">加入错题本</div>
         </div>
       </div>
     </div>
@@ -196,30 +201,30 @@
           缓存系统：使用哈希表存储缓存数据，可以快速地查找数据并提高系统性能；
           数据库索引：数据库中经常使用哈希表存储索引信息，加快数据检索速度；
           路由表：网络路由器使用哈希表存储路由表信息，方便快速地寻找下一跳节点；
+        </div>
+        <div class="flex w-full mt-4">
+          <div class="flex-auto"></div>
+          <label for="my-modal-6" class="btn btn-info">问题反馈</label>
+          <div class="btn ml-4 btn-success" onclick="showAlert2()">加入错题本</div>
+        </div>
       </div>
-      <div class="flex w-full mt-4">
-        <div class="flex-auto"></div>
-        <label for="my-modal-6" class="btn btn-info">问题反馈</label>
-        <div class="btn ml-4 btn-success" onclick="showAlert2()" >加入错题本</div>
-      </div>
+
+
     </div>
-
-
-  </div>
-  <script>
-    function showAlert() {
-      document.getElementById("alert").classList.remove("hidden");
-      setTimeout(function () {
-        document.getElementById("alert").classList.add("hidden");
-      }, 1000);
-    }
-    function showAlert2() {
-      document.getElementById("alert2").classList.remove("hidden");
-      setTimeout(function () {
-        document.getElementById("alert2").classList.add("hidden");
-      }, 1000);
-    }
-  </script>
+    <script>
+      function showAlert() {
+        document.getElementById("alert").classList.remove("hidden");
+        setTimeout(function () {
+          document.getElementById("alert").classList.add("hidden");
+        }, 1000);
+      }
+      function showAlert2() {
+        document.getElementById("alert2").classList.remove("hidden");
+        setTimeout(function () {
+          document.getElementById("alert2").classList.add("hidden");
+        }, 1000);
+      }
+    </script>
 </body>
 
 

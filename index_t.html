@@ -9,13 +9,21 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
-<style>
-  #editor—wrapper {
-    border: 1px solid #ccc;
-    z-index: 100; /* 按需定义 */
-  }
-  #toolbar-container { border-bottom: 1px solid #ccc; }
-  #editor-container { height: 500px; }
+  <style>
+    #editor—wrapper {
+      border: 1px solid #ccc;
+      z-index: 100;
+      /* 按需定义 */
+    }
+
+    #toolbar-container {
+      border-bottom: 1px solid #ccc;
+    }
+
+    #editor-container {
+      height: 500px;
+    }
+
     ::-webkit-scrollbar {
       display: none;
     }
@@ -24,92 +32,96 @@
 
 <input type="checkbox" id="my-modal-8" class="modal-toggle" />
 <label for="my-modal-8" class="modal modal-bottom sm:modal-middle">
-<div class="modal-box bg-gray-300">
-  <div class="my-4">
-    测试名称:
-    <input type="text" placeholder="测试名称" class="input text-white input-bordered w-full max-w-xs" />
+  <div class="modal-box bg-gray-300">
+    <div class="my-4">
+      测试名称:
+      <input type="text" placeholder="测试名称" class="input text-white input-bordered w-full max-w-xs" />
 
-  </div>
-  <div class="my-4">
-    开始时间:
-    <input type="date"  class="input text-white input-bordered  max-w-xs" />
-    <input type="time"  class="input text-white input-bordered  max-w-xs" />
-  </div>
-  <div class="my-4">
-    测试时长:
-    <input type="number" placeholder="120min" class="input text-white input-bordered w-1/3 max-w-xs" />
-  </div>
-  <div class="my-4">
-    参与班级:
-    <select class="select select-primary w-full max-w-xs bg-gray-200">
-      <option disabled selected>参与班级</option>
-      <option> 120230202</option>
-      <option>120230203</option>
-    </select>
-  </div>
-  <div class="my-4">
-    题库选择:
-    <select class="select select-primary w-full max-w-xs bg-gray-200">
-      <option disabled selected>题库</option>
-      <option> 数据结构 1</option>
-      <option>数据结构 2</option>
-    </select>
-  </div> 
-  <div class="my-4">
-    知识点范围:
-    <select class="select select-success w-[120px] bg-gray-500 text-white ">
-      <option disabled selected>开始范围</option>
-      <option>数组</option>
-      <option>链表</option>
-      <option>栈</option>
-      <option>队列</option>
-      <option>树</option>
-      <option>图</option>
-      <option>并查集</option>
-    </select>
+    </div>
+    <div class="my-4">
+      开始时间:
+      <input type="date" class="input text-white input-bordered  max-w-xs" />
+      <input type="time" class="input text-white input-bordered  max-w-xs" />
+    </div>
+    <div class="my-4">
+      测试时长:
+      <input type="number" placeholder="120min" class="input text-white input-bordered w-1/3 max-w-xs" />
+    </div>
+    <div class="my-4">
+      参与班级:
+      <select class="select select-primary w-full max-w-xs bg-gray-200">
+        <option disabled selected>参与班级</option>
+        <option> 120230202</option>
+        <option>120230203</option>
+      </select>
+    </div>
+    <div class="my-4">
+      题库选择:
+      <select class="select select-primary w-full max-w-xs bg-gray-200">
+        <option disabled selected>题库</option>
+        <option> 数据结构 1</option>
+        <option>数据结构 2</option>
+      </select>
+    </div>
+    <div class="my-4">
+      知识点范围:
+      <select class="select select-success w-[120px] bg-gray-500 text-white ">
+        <option disabled selected>开始范围</option>
+        <option>数组</option>
+        <option>链表</option>
+        <option>栈</option>
+        <option>队列</option>
+        <option>树</option>
+        <option>图</option>
+        <option>并查集</option>
+      </select>
 
-    <select class="select select-success w-[120px] bg-gray-500 text-white ">
-      <option disabled selected>结束范围</option>
-      <option>数组</option>
-      <option>链表</option>
-      <option>栈</option>
-      <option>队列</option>
-      <option>树</option>
-      <option>图</option>
-      <option>并查集</option>
-    </select>
-  </div>
-  <div class="my-4">
-    题型设置:
-    <div class="flex space-x-2">
-      题型: 单选 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2" class="checkbox  checkbox-success" checked /></div>
-      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
-      <div></div>
-      多选 <div class="ml-2 flex items-center"> <input  type="checkbox" name="checkbox-2" class="checkbox  checkbox-success" /></div>
-      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
-      <div></div>
-      判断 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2" class="checkbox  checkbox-success"  /></div>
-      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
-      <div></div>
-      简答 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2" class="checkbox  checkbox-success"  /></div>
-      <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+      <select class="select select-success w-[120px] bg-gray-500 text-white ">
+        <option disabled selected>结束范围</option>
+        <option>数组</option>
+        <option>链表</option>
+        <option>栈</option>
+        <option>队列</option>
+        <option>树</option>
+        <option>图</option>
+        <option>并查集</option>
+      </select>
+    </div>
+    <div class="my-4">
+      题型设置:
+      <div class="flex space-x-2">
+        题型: 单选 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2"
+            class="checkbox  checkbox-success" checked /></div>
+        <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+        <div></div>
+        多选 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2"
+            class="checkbox  checkbox-success" /></div>
+        <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+        <div></div>
+        判断 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2"
+            class="checkbox  checkbox-success" /></div>
+        <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
+        <div></div>
+        简答 <div class="ml-2 flex items-center"> <input type="checkbox" name="checkbox-2"
+            class="checkbox  checkbox-success" /></div>
+        <input type="number" placeholder="5" class="w-[40px] bg-gray-200 text-black font-bold ">
 
-    </div> 
-  </div> 
-  <div class="my-4">
-    难易程度:
-    <select class="select select-primary w-full max-w-xs bg-gray-200">
-      <option disabled selected>选择难度</option>
-      <option >简单</option>
-      <option value="">中等</option>
-      <option value="">困难</option>
-    </select>
-  </div> 
+      </div>
+    </div>
+    <div class="my-4">
+      难易程度:
+      <select class="select select-primary w-full max-w-xs bg-gray-200">
+        <option disabled selected>选择难度</option>
+        <option>简单</option>
+        <option value="">中等</option>
+        <option value="">困难</option>
+      </select>
+    </div>
 
-  <div class="modal-action">
-    <label for="my-modal-8" class="btn btn-primary">生成测试</label>
+    <div class="modal-action">
+      <label for="my-modal-8" class="btn btn-primary">生成测试</label>
+    </div>
   </div>
-</div>
 </label>
 
 <input type="checkbox" id="my-modal-7" class="modal-toggle" />
@@ -291,8 +303,8 @@
 
 <input type="checkbox" id="my-modal-5" class="modal-toggle" />
 <label for="my-modal-5" class="modal modal-bottom sm:modal-middle">
-<div class="modal-box bg-gray-300">
-  <div>
+  <div class="modal-box bg-gray-300">
+    <div>
       <div class="flex space-x-2">
         题型: 单选 <div class="ml-2"> <input type="radio" name="radio-2" class="radio  radio-success" checked /></div>
         <div></div>
@@ -303,80 +315,80 @@
         简答 <div class="ml-2"> <input type="radio" name="radio-2" class="radio  radio-success" /></div>
       </div>
     </div>
-  <div class="my-4">
-    试题题目:
-    <div id="editor—wrapper">
-      <div id="toolbar-container"><!-- 工具栏 --></div>
-      <div id="editor-container"><!-- 编辑器 --></div>
-  </div>
-  </div>
-  <div class="my-4 flex ">
-    <div class="w-[65px]">
-      试题选项:
+    <div class="my-4">
+      试题题目:
+      <div id="editor—wrapper">
+        <div id="toolbar-container"><!-- 工具栏 --></div>
+        <div id="editor-container"><!-- 编辑器 --></div>
+      </div>
     </div>
-    <div class="flex flex-col">
-      <input type="text" placeholder="A" class="input text-white input-bordered  max-w-xs" />
-      <input type="text" placeholder="B" class="input text-white input-bordered  max-w-xs" />
-      <input type="text" placeholder="C" class="input text-white input-bordered  max-w-xs" />
-      <input type="text" placeholder="D" class="input text-white input-bordered  max-w-xs" />
+    <div class="my-4 flex ">
+      <div class="w-[65px]">
+        试题选项:
+      </div>
+      <div class="flex flex-col">
+        <input type="text" placeholder="A" class="input text-white input-bordered  max-w-xs" />
+        <input type="text" placeholder="B" class="input text-white input-bordered  max-w-xs" />
+        <input type="text" placeholder="C" class="input text-white input-bordered  max-w-xs" />
+        <input type="text" placeholder="D" class="input text-white input-bordered  max-w-xs" />
+      </div>
+      <div>
+        <textarea name="te" id="" cols="30" rows="10"></textarea>
+      </div>
     </div>
-    <div>
-      <textarea name="te" id="" cols="30" rows="10"></textarea>
+    <div class="my-4">
+      正确答案:
+      <input type="text" placeholder="正确答案" class="input text-white input-bordered w-full max-w-xs" />
     </div>
-  </div>
-  <div class="my-4">
-    正确答案:
-    <input type="text" placeholder="正确答案" class="input text-white input-bordered w-full max-w-xs" />
-  </div>
-  <div class="my-4">
-    试题解析:
-    <input type="text" placeholder="试题解析" class="input text-white input-bordered w-full max-w-xs" />
-  </div>
+    <div class="my-4">
+      试题解析:
+      <input type="text" placeholder="试题解析" class="input text-white input-bordered w-full max-w-xs" />
+    </div>
 
-  <div class="modal-action">
-    <label for="my-modal-5" class="btn btn-primary">发布题目</label>
+    <div class="modal-action">
+      <label for="my-modal-5" class="btn btn-primary">发布题目</label>
+    </div>
   </div>
-</div>
 </label>
 
 
 <input type="checkbox" id="my-modal-6" class="modal-toggle" />
 <label for="my-modal-6" class="modal modal-bottom sm:modal-middle">
-<div class="modal-box bg-gray-300">
-  <div class="my-4">
-    测试名称:
-    <input type="text" placeholder="测试名称" class="input text-white input-bordered w-full max-w-xs" />
+  <div class="modal-box bg-gray-300">
+    <div class="my-4">
+      测试名称:
+      <input type="text" placeholder="测试名称" class="input text-white input-bordered w-full max-w-xs" />
 
-  </div>
-  <div class="my-4">
-    开始时间:
-    <input type="date"  class="input text-white input-bordered  max-w-xs" />
-    <input type="time"  class="input text-white input-bordered  max-w-xs" />
-  </div>
-  <div class="my-4">
-    测试时长:
-    <input type="number" placeholder="120min" class="input text-white input-bordered w-1/3 max-w-xs" />
-  </div>
-  <div class="my-4">
-    参与班级:
-    <select class="select select-primary w-full max-w-xs bg-gray-200">
-      <option disabled selected>参与班级</option>
-      <option> 120230202</option>
-      <option>120230203</option>
-    </select>
-  </div>
-  <div class="my-4">
-    <div>
-      测试题目编号:
     </div>
-  
-    <textarea name="" id="" cols="30" rows="10" placeholder="1 2 3"></textarea>
-  </div>
+    <div class="my-4">
+      开始时间:
+      <input type="date" class="input text-white input-bordered  max-w-xs" />
+      <input type="time" class="input text-white input-bordered  max-w-xs" />
+    </div>
+    <div class="my-4">
+      测试时长:
+      <input type="number" placeholder="120min" class="input text-white input-bordered w-1/3 max-w-xs" />
+    </div>
+    <div class="my-4">
+      参与班级:
+      <select class="select select-primary w-full max-w-xs bg-gray-200">
+        <option disabled selected>参与班级</option>
+        <option> 120230202</option>
+        <option>120230203</option>
+      </select>
+    </div>
+    <div class="my-4">
+      <div>
+        测试题目编号:
+      </div>
 
-  <div class="modal-action">
-    <label for="my-modal-6" class="btn btn-primary">发布测试</label>
+      <textarea name="" id="" cols="30" rows="10" placeholder="1 2 3"></textarea>
+    </div>
+
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn btn-primary">发布测试</label>
+    </div>
   </div>
-</div>
 </label>
 
 
@@ -441,10 +453,10 @@
       <label for="my-modal-2" class="btn btn-secondary">发布多选题</label>
       <label for="my-modal-3" class="btn btn-info">发布判断题</label>
       <label for="my-modal-4" class="btn btn-primary">发布简答题</label>
-     
-      <label for="my-modal-5" class="btn btn-warning">富文本编辑</label> 
+
+      <label for="my-modal-5" class="btn btn-warning">富文本编辑</label>
       <div class="flex-1"></div>
-      <label for="my-modal-6" class="btn btn-success">发布测试</label> 
+      <label for="my-modal-6" class="btn btn-success">发布测试</label>
       <label for="my-modal-8" href="./testrecord_t.html" class="btn btn-error">生成测试</label>
       <a href="./testrecord_t.html" class="btn ">测试记录</a>
 
@@ -468,11 +480,11 @@
               </select>
             </th>
             <th class="px-4 py-2"><select class="select select-primary w-full max-w-xs bg-gray-200">
-              <option disabled selected>难易程度</option>
-              <option>简单</option>
-              <option>中等</option>
-              <option>困难</option>
-            </select></th>
+                <option disabled selected>难易程度</option>
+                <option>简单</option>
+                <option>中等</option>
+                <option>困难</option>
+              </select></th>
             <th class="px-4 py-2">编辑时间</th>
             <th class="px-4 py-2">操作</th>
           </tr>
@@ -489,7 +501,7 @@
             <td class="border px-4 py-2">2022-01-01</td>
             <td class="border px-4 py-2">
               <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
-              
+
               <button class="btn btn-xs btn-danger">删除</button>
             </td>
           </tr>
@@ -539,7 +551,7 @@
             <td class="border px-4 py-2"><input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600"></td>
             <td class="border px-4 py-2">5</td>
             <td class="border px-4 py-2">这是一道单选题
- 
+
             </td>
             <td class="border px-4 py-2">单选</td>
             <td class="border px-4 py-2">B</td>
@@ -621,14 +633,14 @@
               <button class="btn btn-xs btn-danger">删除</button>
             </td>
           </tr>
-          </table>
-          <div class="join py-4 self-center">
-            <button class="join-item btn">1</button>
-            <button class="join-item btn btn-active">2</button>
-            <button class="join-item btn">3</button>
-            <button class="join-item btn">4</button>
-          </div>
-   
+      </table>
+      <div class="join py-4 self-center">
+        <button class="join-item btn">1</button>
+        <button class="join-item btn btn-active">2</button>
+        <button class="join-item btn">3</button>
+        <button class="join-item btn">4</button>
+      </div>
+
 
     </div>
 
@@ -653,32 +665,32 @@
     </script>
     <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
     <script>
-    const { createEditor, createToolbar } = window.wangEditor
-    
-    const editorConfig = {
+      const { createEditor, createToolbar } = window.wangEditor
+
+      const editorConfig = {
         placeholder: 'Type here...',
         onChange(editor) {
           const html = editor.getHtml()
           console.log('editor content', html)
           // 也可以同步到 <textarea>
         }
-    }
-    
-    const editor = createEditor({
+      }
+
+      const editor = createEditor({
         selector: '#editor-container',
         html: '<p><br></p>',
         config: editorConfig,
         mode: 'default', // or 'simple'
-    })
-    
-    const toolbarConfig = {}
-    
-    const toolbar = createToolbar({
+      })
+
+      const toolbarConfig = {}
+
+      const toolbar = createToolbar({
         editor,
         selector: '#toolbar-container',
         config: toolbarConfig,
         mode: 'default', // or 'simple'
-    })
+      })
     </script>
 
 </body>
