@@ -11,9 +11,67 @@
 
 </head>
 
+<input type="checkbox" id="my-modal-2" class="modal-toggle" />
+<label for="my-modal-2" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box bg-gray-300">
+    <h3 class="font-bold text-lg">编辑题目</h3>
+    <div class="my-4">
+      试题题目:
+      <input type="text" placeholder="请编写题目" class="input text-white input-bordered w-full max-w-xs" />
+    </div>
+    <div class="my-4 flex ">
+      <div class="w-[65px]">
+        试题选项:
+      </div>
+      <div class="flex flex-col">
+        <input type="text" placeholder="A" class="input text-white input-bordered  max-w-xs" />
+        <input type="text" placeholder="B" class="input text-white input-bordered  max-w-xs" />
+        <input type="text" placeholder="C" class="input text-white input-bordered  max-w-xs" />
+        <input type="text" placeholder="D" class="input text-white input-bordered  max-w-xs" />
+      </div>
+    </div>
+    <div class="my-4">
+      正确答案:
+      <input type="text" placeholder="正确答案" class="input text-white input-bordered w-full max-w-xs" />
+    </div>
+    <div class="my-4">
+      试题解析:
+      <input type="text" placeholder="试题解析" class="input text-white input-bordered w-full max-w-xs" />
+    </div>
+
+    <div class="modal-action">
+      <label for="my-modal-2" class="btn btn-primary">完成编辑</label>
+    </div>
+  </div>
+</label>
+
+<input type="checkbox" id="my-modal-7" class="modal-toggle" />
+<label for="my-modal-7" class="modal modal-bottom sm:modal-middle text-black">
+  <div class="modal-box bg-gray-300">
+    <h3 class="font-bold text-lg">编辑题目信息</h3>
+    <div class="my-4">
+      题目:
+      <input type="text" placeholder="题库名称" class="input input-bordered w-full max-w-xs" />
+    </div>
+    <div class="my-4">
+      题库介绍:
+      <input type="text" placeholder=" 题库介绍" class="input input-bordered w-full max-w-xs" />
+    </div>
+    <div class="my-4">
+      发布人:
+      <input type="text" placeholder="发布人" class="input input-bordered w-full max-w-xs" />
+    </div>
+    <div class="modal-action">
+      <label class="btn btn-primary">保存修改</label>
+    </div>
+  </div>
+</label>
+
+
+
 <body class="bg-gray-300 h-screen overflow-y-scroll w-full">
   <div class="h-[10%] bg-base-200 flex items-center ">
-    <h1 class="text-white text-2xl ml-4">在线测试管理系统</h1>
+    <a href="./index_m.html" class="text-white text-2xl ml-4">在线测试管理系统</a>
     <div class="flex-1"></div>
     <div class="dropdown dropdown-bottom">
       <label tabindex="0" class="avatar cursor-pointer">
@@ -40,28 +98,22 @@
   <div class="flex h-[90%] ">
     <div class="h-full bg-base-200">
       <ul class="menu bg-base-200 w-56 rounded-box">
-        <li><a>题库管理</a></li>
+        <li><a href="./index_m.html">题库管理</a></li>
       </ul>
     </div>
     <div class="flex flex-col flex-1">
       <div class="flex px-4 mt-8 py-3   bg-gray-100 items-center ">
-        <div class="btn btn-success ">
-          新增题库
-        </div>
         <div class="flex-[0.8]"></div>
         <div class="text-black">
-          题库简介：
+          题目信息：
           <input type="text" placeholder="请输入关键字" class="input ">
         </div>
         <div class="flex-[0.1]"></div>
-        <div class="text-black">题库名称
-          <input type="text" placeholder="请输入题库名称" class="input ">
-        </div>
         <div class="flex-[0.05]"></div>
-        <div class="btn btn-warning"> 查询</div>
+        <div class="btn btn-warning">查询</div>
       </div>
       <div class="border-2 flex flex-col">
-        <table class="table-auto w-full">
+        <table class="table-auto w-full text-black">
           <thead class="border">
             <tr>
               <th class="px-4 py-2"><input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600"></th>
@@ -99,7 +151,8 @@
               <td class="border px-4 py-2">简单</td>
               <td class="border px-4 py-2">2022-01-01</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
 
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
@@ -114,7 +167,8 @@
               <td class="border px-4 py-2">中等</td>
               <td class="border px-4 py-2">2022-01-02</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -128,7 +182,8 @@
               <td class="border px-4 py-2">中等</td>
               <td class="border px-4 py-2">2022-01-03</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -142,7 +197,8 @@
               <td class="border px-4 py-2">复杂</td>
               <td class="border px-4 py-2">2022-01-04</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -158,7 +214,8 @@
               <td class="border px-4 py-2">简单</td>
               <td class="border px-4 py-2">2022-01-05</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -172,7 +229,8 @@
               <td class="border px-4 py-2">中等</td>
               <td class="border px-4 py-2">2022-01-06</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -186,7 +244,8 @@
               <td class="border px-4 py-2">中等</td>
               <td class="border px-4 py-2">2022-01-07</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -200,7 +259,8 @@
               <td class="border px-4 py-2">复杂</td>
               <td class="border px-4 py-2">2022-01-08</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -214,7 +274,8 @@
               <td class="border px-4 py-2">简单</td>
               <td class="border px-4 py-2">2022-01-09</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
@@ -228,7 +289,8 @@
               <td class="border px-4 py-2">简单</td>
               <td class="border px-4 py-2">2022-01-09</td>
               <td class="border px-4 py-2">
-                <label for="my-modal-7" class="btn btn-xs btn-primary">编辑</label>
+                <label for="my-modal-2" class="btn btn-xs btn-primary">编辑</label>
+
                 <button class="btn btn-xs btn-danger">删除</button>
               </td>
             </tr>
